@@ -1,0 +1,11 @@
+{% if ques%}
+<ul>
+    {% for i in ques %}
+    <li>
+        <a href="{% url 'polls:details' i.id %}">{{i.question_text}}</a>
+    </li>
+    {%endfor%}
+</ul>
+{%else%}
+<h2>You Have No questions to display</h2>
+{%endif%}
